@@ -1,9 +1,7 @@
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import {Icon} from "react-native-elements";
-import {RestauranteStack} from "./RestauranteStack";
-import {FavoritoStack} from "./FavoritoStack";
-import { PuntuacionStack } from "./PuntuacionStack";
-import { BuscarStack } from "./BuscarStack";
+import {LoginStack} from "./LoginStack";
+import {MapaStack} from "./MapaStack";
 import { CuentaStack } from "./CuentaStack";
 import {vista} from "../utils";
 
@@ -21,23 +19,15 @@ export function AppNavegacion(){
             tabBarIcon: ({ color, size}) => screenOptions(route, color, size),
         })}>
             <Tab.Screen 
-                name={vista.Restaurante.tab} 
-                component={RestauranteStack} 
-                options={{title: "Restaurante"}}
+                name={vista.Login.tab} 
+                component={LoginStack} 
+                options={{title: "Login"}}
             />
             <Tab.Screen 
-                name={vista.Favoritos.tab} 
-                component={FavoritoStack}  
-                options={{title: "Favoritos"}}
+                name={vista.Mapa.tab} 
+                component={MapaStack}  
+                options={{title: "Mapa"}}
             />
-            <Tab.Screen 
-                name={vista.Puntuacion.tab} 
-                component={PuntuacionStack}  
-                options={{title: "Puntación"}}/>
-            <Tab.Screen 
-                name={vista.Buscar.tab} 
-                component={BuscarStack}  
-                options={{title: "Buscar"}}/>
             <Tab.Screen 
                 name={vista.Cuenta.tab} 
                 component={CuentaStack}  
@@ -49,20 +39,14 @@ export function AppNavegacion(){
 
 function screenOptions (route, color, size){
     let iconName;
-    if(route.name === vista.Restaurante.tab)
-        iconName = "compass-outline";
+    if(route.name === vista.Login.tab)
+        iconName = "login";
     
-    if(route.name === vista.Favoritos.tab)
-        iconName = "heart-outline";
-    
-    if(route.name === vista.Puntuacion.tab)
-        iconName = "star-outline";
-
-    if(route.name === vista.Buscar.tab)
-        iconName = "magnify";
+    if(route.name === vista.Mapa.tab)
+        iconName = "google-maps";
     
     if(route.name === vista.Cuenta.tab)
-        iconName = "home-outline";
+        iconName = "account";
 
     return(
        <Icon type="material-community" name={iconName} color={color} size={size} />

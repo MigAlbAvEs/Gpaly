@@ -1,7 +1,8 @@
+import React from 'react'
 import {NavigationContainer} from "@react-navigation/native"
-import { AppNavegacion } from "./src/navigation/AppNavegacion";
+import {AppNavegacion} from "../navigation/AppNavegacion";
 
-export default function App() {
+export function AppNavegacionVista() {
     return (
       <>
         <NavigationContainer>
@@ -10,4 +11,4 @@ export default function App() {
       </>
     );
   }
-
+  

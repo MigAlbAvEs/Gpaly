@@ -1,16 +1,16 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { FavoritosVista }  from "../vistas/FavoritosVista";
+import { MapaVista }  from "../vistas/MapaVista";
 import {vista} from "../utils";
 
 const Stack = createNativeStackNavigator();
 
-export function FavoritoStack() {
+export function MapaStack() {
   return (
     <Stack.Navigator>
         <Stack.Screen 
-        name={vista.Favoritos.Favoritos } 
-        component={FavoritosVista} 
-        options = {{title:"Favoritos"}}
+        name={vista.Mapa.Mapa } 
+        component={MapaVista} 
+        options = {{title:"Mapa"}}
         />
     </Stack.Navigator>
   )

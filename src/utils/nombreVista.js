@@ -1,29 +1,19 @@
-const RestauranteStack = {
-    tab: "RestautanteTab",
-    Restaurante :"Restaurante",
-    AgregaRestaurante: "AgregaRestaurante",
+const LoginStack = {
+    tab: "LoginTab",
+    Login :"Login",
+    Registrarse: "Registrarse",
 }
-const FavoritosStack = {
-    tab: "FavoritosTab",
-    Favoritos: "Favoritos",
-}
-const PuntuacionStack = {
-    tab: "PuntuacionTab",
-    Puntuacion: "Puntuacion", 
-}
-const BuscarStack = {
-    tab: "BuscarTab",
-    Buscar: "Buscar",
+const MapaStack = {
+    tab: "MapaTab",
+    Mapa: "Mapa",
 }
 const CuentaStack = {
     tab: "CuentaTab",
     Cuenta: "Cuenta",
 }
 export const vista = {
-    Restaurante: RestauranteStack,
-    Favoritos: FavoritosStack,
-    Puntuacion: PuntuacionStack,
-    Buscar: BuscarStack,
+    Login: LoginStack,
+    Mapa: MapaStack,
     Cuenta: CuentaStack,
     
 };
