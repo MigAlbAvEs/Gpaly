@@ -6,7 +6,7 @@ import {} from "./LoadingModal.styles";
 export function LoadingModal(props) { 
     const {show, text} = props; 
     return (
-        <Overlay> 
+        <Overlay isVisible= {show}> 
             <View>
                 <ActivityIndicator size= "large" color= "00a680" />
             </View>
@@ -15,5 +15,5 @@ export function LoadingModal(props) {
 }
 
 LoadingModal.defaultProps = {
-    show: false,
+    show: true,
 }
