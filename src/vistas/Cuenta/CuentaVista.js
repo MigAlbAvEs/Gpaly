@@ -7,7 +7,7 @@ import {} from "../../components"
 
 export  function CuentaVista() {
 
-  const [accedido, setAccedido]= useState(null);
+  const [Accedido, setAccedido]= useState(null);
 
   useEffect(() => {
     const auth = getAuth();
