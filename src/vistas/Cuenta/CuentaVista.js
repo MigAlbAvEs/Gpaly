@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { View, Text, Image} from 'react-native'
-import {InvitadoVista} from "./InvitadoVista"
+import {InvitadoVista} from "./UsuarioInvitado/InvitadoVista"
 import {RegistradoVista} from "./RegistradoVista"
 import {getAuth,onAuthStateChanged} from "firebase/auth"
 import {} from "../../components"
@@ -16,5 +16,9 @@ export  function CuentaVista() {
     })
   }, [])
 
+  if (Accedido === null)
+  {
+    return <LoadingModal/>
+  }
   return Accedido ? <RegistradoVista/> : <InvitadoVista/>; 
 }

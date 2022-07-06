@@ -10,6 +10,7 @@ const MapaStack = {
 const CuentaStack = {
     tab: "CuentaTab",
     Cuenta: "Cuenta",
+    Login: "Login",
 }
 export const vista = {
     Login: LoginStack,
